@@ -1,31 +1,39 @@
-﻿@{
+﻿<head>
+    <style type="text/css">
+        #Password1 {
+            width: 589px;
+            height: 67px;
+        }
+        #link_entry {
+            width: 739px;
+            height: 41px;
+        }
+        #shorten_button {
+            height: 42px;
+        }
+        .auto-style2 {
+            width: 41px;
+            height: 41px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>Link Shortener</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<p>
+    <img class="auto-style2" src="~/Images/link-management-icon.png" style="background-color: #FF0000" />
+    <input id="link_entry" 
+           type="text" 
+           style="font-family: 8514oem; font-size: 26px; text-decoration: underline overline line-through; color: #000080; font-style: italic; font-weight: bolder; background-color: #FF9933; border: thick dotted #FF0000" />
+    <input id="shorten_button" 
+           type="button" 
+           onclick="location.href='@Url.Action("OnSubmitLink", "Home")'"
+           value="Shorten Link" 
+           style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px; font-weight: normal; font-style: normal; font-variant: small-caps" />
+</p>

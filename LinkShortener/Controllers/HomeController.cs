@@ -8,22 +8,18 @@ namespace LinkShortener.Controllers
 {
     public class HomeController : Controller
     {
+        /* 
+         * Called by onClick method of the Shorten Link Button
+         * Redirects the user to google webpage
+         */
+         
+        public ActionResult OnSubmitLink(string longLink)
+        {
+            return Redirect("https://www.google.com");
+        }
+
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
